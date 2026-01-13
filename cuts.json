@@ -1,0 +1,47 @@
+[
+  {
+    "thing": "Air conditioning",
+    "save": 4200,
+    "trust": 6
+  },
+  {
+    "thing": "Office chairs",
+    "save": 1800,
+    "trust": 9
+  },
+  {
+    "thing": "Coffee lids",
+    "save": 240,
+    "trust": 3
+  },
+  {
+    "thing": "Team lunches",
+    "save": 1200,
+    "trust": 7
+  },
+  {
+    "thing": "Silence",
+    "save": 0,
+    "trust": 5
+  },
+  {
+    "thing": "Hope",
+    "save": 0,
+    "trust": 12
+  },
+  {
+    "thing": "Keyboard sharing program",
+    "save": 600,
+    "trust": 10
+  },
+  {
+    "thing": "Printer ink (replace with positive thoughts)",
+    "save": 300,
+    "trust": 4
+  },
+  {
+    "thing": "Weekend existence",
+    "save": 0,
+    "trust": 8
+  }
+]

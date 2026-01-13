@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>2 Hot Dogs, 1 Bun™</title>
+  <meta name="description" content="A CFO playbook for cost optimization without reducing headcount (officially)."/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap navInner">
+    <div class="brand">
+      <div class="logo">🌭🌭🍞</div>
+      <div>
+        <div class="brandName">2 Hot Dogs, 1 Bun™</div>
+        <div class="brandTag">CFO-grade cost optimization</div>
+      </div>
+    </div>
+    <nav class="navLinks">
+      <a href="#methods">Methods</a>
+      <a href="#tools">Tools</a>
+      <a href="#compliance">Compliance</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap heroGrid">
+    <div>
+      <span class="pill">ENTERPRISE SAVINGS FRAMEWORK</span>
+      <h1>If One Bun Can Hold Two Hot Dogs,<br/>What Else Are We Overpaying For?</h1>
+      <p class="sub">
+        A CFO-certified guide to reducing costs in ways that technically work,
+        emotionally don’t, and culturally devastate.
+      </p>
+      <div class="heroActions">
+        <button class="btn" id="applyCuts">Apply Cost Optimization (adds savings)</button>
+        <button class="btn ghost" id="whatNext">What will the CFO cut next?</button>
+      </div>
+      <div class="badges">
+        <span>✅ Optics-first savings</span>
+        <span>✅ Spreadsheet-positive</span>
+        <span>❌ Human-compatible</span>
+        <span>⚠️ Legally adjacent</span>
+      </div>
+    </div>
+
+    <div class="heroCard">
+      <div class="heroCardTitle">Case Study: Bun Consolidation Event (BCE-2018)</div>
+      <p>
+        During a company cookout, the CFO returned from the grill holding
+        <strong>two hot dogs in one bun</strong>.
+      </p>
+      <div class="counters">
+  <div class="counterCard">
+    <div class="counterLabel">Costs saved</div>
+    <div class="counterValue" id="savingsValue">$0.23</div>
+    <div class="counterHint">*estimated</div>
+  </div>
+  <div class="counterCard trustCard" id="trustCard">
+    <div class="counterLabel">Trust remaining</div>
+    <div class="counterValue" id="trustValue">100%</div>
+    <div class="trustBar">
+      <div class="trustFill" id="trustFill"></div>
+    </div>
+    <div class="counterHint" id="trustHint">still mostly here</div>
+  </div>
+</div>
+<p class="muted tiny">Every “optimization” increases savings and reduces trust.</p>
+      <p class="muted">This framework was born that day.</p>
+    </div>
+  </div>
+</section>
+
+<section id="methods" class="section alt">
+  <div class="wrap">
+    <h2>Low-Visibility Cost Synergies</h2>
+    <div class="grid3">
+      <div class="card">
+        <h3>Employee Decimalization</h3>
+        <p>
+          Convert employees into fractional headcount units.
+          Layoffs are now “rounding corrections.”
+        </p>
+        <p class="meta">Morale impact: theoretical</p>
+      </div>
+      <div class="card">
+        <h3>Monitor Time-Sharing</h3>
+        <p>
+          Engineers reserve monitors in 30‑minute blocks.
+          Idle pixels are waste.
+        </p>
+        <p class="meta">Productivity measured per pixel-hour</p>
+      </div>
+      <div class="card">
+        <h3>Bathroom-as-a-Service</h3>
+        <p>
+          Restrooms are centralized. Walking builds character.
+        </p>
+        <p class="meta">Steps added: 4,000/day</p>
+      </div>
+      <div class="card">
+        <h3>Meeting Chair Rotation</h3>
+        <p>
+          No chairs provided. Standing meetings end faster.
+        </p>
+        <p class="meta">OSHA compliance: pending</p>
+      </div>
+      <div class="card">
+        <h3>Keyboard Sharing Program</h3>
+        <p>
+          Each team receives one keyboard.
+          Collaboration increases by force.
+        </p>
+        <p class="meta">Germs: cross‑functional</p>
+      </div>
+      <div class="card">
+        <h3>Expense Report Fatigue</h3>
+        <p>
+          Add 14 mandatory fields.
+          Employees stop submitting expenses entirely.
+        </p>
+        <p class="meta">Savings realized: $9,400</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="tools" class="section">
+  <div class="wrap">
+    <h2>Executive Decision Tools</h2>
+    <p class="muted" style="margin-top:-6px">Tip: edit <code>cuts.json</code> to add your own CFO cuts.</p>
+    <div class="toolsGrid">
+      <div class="toolCard">
+        <h3>Shareholder Narrative Simulator</h3>
+        <p id="narrative">
+          Click below to generate a justification that sounds strategic.
+        </p>
+        <button class="btn small" id="genNarrative">Generate narrative</button>
+      </div>
+      <div class="toolCard">
+        <h3>Morale Impact Estimator</h3>
+        <p>
+          Estimated morale impact:
+          <strong>Acceptable (until next quarter)</strong>
+        </p>
+        <div class="progress">
+          <div class="bar" id="moraleBar"></div>
+        </div>
+      </div>
+<form id="addCutForm" class="addCutForm">
+      <label>
+        Cut idea
+        <input id="cutName" type="text" placeholder="e.g., Email signatures (per character)" required />
+      </label>
+      <label>
+        Savings (USD)
+        <input id="cutSave" type="number" min="0" step="1" placeholder="e.g., 2500" required />
+      </label>
+      <label>
+        Trust hit (%)
+        <input id="cutTrust" type="number" min="0" max="50" step="1" placeholder="e.g., 7" required />
+      </label>
+      <div class="addCutActions">
+        <button class="btn small" type="submit">Add cut</button>
+        <button class="btn small ghost" type="button" id="resetCuts">Reset to defaults</button>
+      </div>
+    </form>
+
+    <div class="cutListWrap">
+      <div class="counterLabel">Your cuts</div>
+      <div id="cutList" class="cutList"></div>
+    </div>
+  </div>
+</div>
+
+</div>
+  </div>
+</section>
+
+<section id="compliance" class="section alt">
+  <div class="wrap">
+    <h2>Compliance & Governance</h2>
+    <div class="certs">
+      <span>SOC 2 (emotionally)</span>
+      <span>GAAP-adjacent</span>
+      <span>SOX‑aware</span>
+      <span>HR‑informed (after)</span>
+      <span>Ethics Committee (calendar invite sent)</span>
+    </div>
+    <p class="muted">
+      All cost optimizations reviewed internally by finance.
+    </p>
+  </div>
+</section>
+
+<section id="faq" class="section">
+  <div class="wrap">
+    <h2>FAQ</h2>
+    <details open>
+      <summary>Is this legal?</summary>
+      <p>Legal has been looped in via CC.</p>
+    </details>
+    <details>
+      <summary>Will employees notice?</summary>
+      <p>Not immediately. Exit interviews take time.</p>
+    </details>
+    <details>
+      <summary>Does this actually save money?</summary>
+      <p>It saves confidence.</p>
+    </details>
+    <details>
+      <summary>Why the hot dogs?</summary>
+      <p>Because culture is expensive.</p>
+    </details>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap footerInner">
+    <p>2hotdogs1bun.com — Because the spreadsheet doesn’t eat lunch.</p>
+  </div>
+</footer>
+
+<div class="toast" id="toast">
+  <div id="toastText"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
